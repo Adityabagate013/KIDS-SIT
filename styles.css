@@ -1,0 +1,342 @@
+/* Reset styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-image: url('4260677.jpg'); /* Change to your preferred background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keep the background image fixed in position */
+    margin: 0;
+    padding: 0;
+    backdrop-filter: blur(5px); /* Adjust the blur radius as needed */
+    -webkit-backdrop-filter: blur(5px); /* For older versions of Safari */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body covers the entire viewport height */
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    border-bottom: 2px solid #f0f0f0; /* Add separation from main content */
+}
+
+header h1 {
+    font-size: 1.5em;
+}
+
+header img {
+    max-width: 80px; /* Adjust the max-width to your preference */
+    border-radius: 50%; /* Make the logo circular */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Add smooth transition effect */
+}
+
+nav a:hover {
+    color: #666; /* Change color on hover */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.hero h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    background-color: #292575;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add smooth transition effect */
+}
+
+.hero button:hover {
+    background-color: #574fdc; /* Darken color on hover */
+}
+
+/* Features Section Styles */
+.features {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.features article {
+    width: 23%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    transition: transform 0.3s ease; /* Add smooth transition effect */
+}
+
+.features article:hover {
+    transform: translateY(-5px); /* Add slight lift effect on hover */
+}
+
+.features article h4 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.features article ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.features article ul li {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Gadgets Section Styles */
+.gadgets {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    margin-top: 40px;
+}
+
+.gadgets h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.gadgets p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.gadgets button {
+    background-color: #35884f;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add smooth transition effect */
+}
+
+.gadgets button:hover {
+    background-color: #2acc55; /* Darken color on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #08bd4d;
+    padding: 40px;
+    text-align: center;
+    color: #fff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: auto;
+}
+
+footer p {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer nav ul li {
+    margin-left: 20px;
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Add smooth transition effect */
+}
+
+footer nav ul li a:hover {
+    color: #eee; /* Lighten color on hover */
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .features article {
+        width: 48%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .features {
+        flex-direction: column;
+    }
+
+    .features article {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Additional Styles */
+#word-puzzle {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#scrambled-word {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    /* Added margin to the body */
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+button {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* Changed button color */
+    background-color: #6C63FF;
+    color: #fff;
+    cursor: pointer;
+    /* Added transition effect */
+    transition: background-color 0.3s ease;
+}
+
+button {
+    background-color: #6C63FF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #574fdc;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+a {
+    color: #714600;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Additional styles for toggling visibility */
+.features article ul {
+    display: none; /* Initially hide all lists */
+}
+.features article.active ul {
+    display: block; /* Display lists when the corresponding article is active */
+}
+
+.gadget-item {
+    text-align: center; /* Center the content horizontally */
+}
+
+.gadget-item img {
+    width: 200px; /* Set a fixed width for all images */
+    height: 200px; /* Set a fixed height for all images */
+    display: inline-block; /* Ensure images are displayed inline */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire space */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    margin-bottom: 10px; /* Add some space below the image */
+}
