@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Learning Platform for Kindere Garden and Primary Students</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="admin-styles.css"> <!-- Additional CSS for administrators -->
+</head>
+<body>
+    <header>
+        <h1>SmartKids<span style="color: #6C63FF;">Hub</span></h1>
+        <img src="logoimage.jpg" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Main content -->
+        <section class="hero">
+            <h2>Start Your Learning Journey</h2>
+            <p>Experience the joy of learning with our interactive platform.</p>
+        </section>
+        <section class="features">
+            <article id="admin" class="toggle-article" onclick="toggleVisibility('admin')">
+                <h4>For Administrators</h4>
+                <ul>
+                    <li><a href="admin.html">Manage Courses</a></li>
+                    <li><a href="admin.html">Create Quizzes</a></li>
+                    <li><a href="admin.html">User Management</a></li>
+                </ul>
+            </article>
+            <article id="teacher" class="toggle-article" onclick="toggleVisibility('teacher')">
+                <h4>For Teachers</h4>
+                <ul>
+                    <li><a href="lessons.html">Engaging Lessons</a></li>
+                    <li><a href="progress.html">Student Progress Tracking</a></li>
+                </ul>
+            </article>
+            <article id="parents" class="toggle-article" onclick="toggleVisibility('parents')">
+                <h4>For Parents</h4>
+                <ul>
+                    <li><a href="monitor-learning.html">Monitor Child's Learning</a></li>
+                    <li><a href="engage-teachers.html">Engage with Teachers</a></li>
+                    <li><a href="parent-collaboration.html">Parent-Teacher Collaboration</a></li>
+                </ul>
+            </article>
+            <article id="students" class="toggle-article" onclick="toggleVisibility('students')">
+                <h4>For Students</h4>
+                <ul>
+                    <li><a href="interactive-games.html">Interactive Games</a></li>
+                    <li><a href="fun-learning-activities.html">Fun Learning Activities</a></li>
+                    <li><a href="exciting-challenges.html">Exciting Challenges</a></li>
+                    <li><a href="rewards-and-achievements.html">Rewards and Achievements</a></li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="gadgets">
+            <h3>Explore Learning Gadgets</h3>
+            <p>Enhance your learning with our curated collection of gadgets.</p>
+            <div class="gadgets-container">
+                <div class="gadget-item">
+                    <a href="https://www.amazon.com/s?k=educational+flashcards" target="_blank">
+                        <img src="shop\Flash Card.jpg" alt="Flashcards">
+                        <h4>Flashcards</h4>
+                        <p>Colorful and interactive flashcards for learning alphabets, numbers, and shapes.</p>
+                    </a>
+                </div>
+                <div class="gadget-item">
+                    <a href="https://www.amazon.com/s?k=educational+tablet" target="_blank">
+                        <img src="shop\Educational Tablet.jpg" alt="Educational Tablet">
+                        <h4>Educational Tablet</h4>
+                        <p>Preloaded with educational games, quizzes, and interactive lessons tailored for young learners.</p>
+                    </a>
+                </div>
+                <div class="gadget-item">
+                    <a href="https://www.flipkart.com/search?q=Puzzle%20mat&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off" target="_blank">
+                        <img src="shop\Puzzle Mats.webp" alt="Puzzle Mats">
+                        <h4>Puzzle Mats</h4>
+                        <p>Soft and safe puzzle mats featuring letters, numbers, and animals for interactive play and learning.</p>
+                    </a>
+                </div>
+                <div class="gadget-item">
+                    <a href="https://www.educationalinsights.com/" target="_blank">
+                        <img src="shop\Storybooks.webp" alt="Storybooks">
+                        <h4>Storybooks</h4>
+                        <p>Engaging storybooks with colorful illustrations to encourage reading and imagination.</p>
+                    </a>
+                </div>
+            </div>
+            <button onclick="window.open('https://www.amazon.com', '_blank')">Explore More Gadgets on Amazon</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 SparkleLearn. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
