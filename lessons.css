@@ -1,0 +1,93 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('4260677.jpg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body covers at least the entire viewport height */
+    position: relative; /* Required for overlay */
+}
+
+/* Header styles */
+header {
+    background-color: #48ea48;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+/* Logo styles */
+header img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main content styles */
+main {
+    flex: 1; /* Grow and shrink to fill available space */
+    padding: 20px;
+}
+
+h2 {
+    color: #6C63FF;
+}
+
+/* Lesson styles */
+.lesson {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.lesson h3 {
+    margin-top: 0;
+}
+
+.lesson p {
+    margin-bottom: 10px;
+}
+
+.start-lesson-btn {
+    background-color: #6C63FF;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.start-lesson-btn:hover {
+    background-color: #5248E6;
+}
+
+/* Footer styles */
+footer {
+    background-color: #08bd4d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}

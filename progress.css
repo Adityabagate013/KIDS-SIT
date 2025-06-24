@@ -1,0 +1,39 @@
+/* Style for progress tracking section */
+main {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+h2 {
+    color: #6C63FF;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+label {
+    color: #333;
+}
+
+/* Styling checked checkboxes */
+input[type="checkbox"]:checked + label {
+    color: #6C63FF;
+    font-weight: bold;
+}
+
+/* Hover effect for checkboxes */
+input[type="checkbox"]:hover + label {
+    text-decoration: underline;
+    cursor: pointer;
+}

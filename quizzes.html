@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz for Nursery to 2nd Class</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  #quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  #question {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .option {
+    margin-bottom: 10px;
+  }
+  #submit-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div id="quiz-container">
+  <h2 id="question">Question:</h2>
+  <div id="options-container"></div>
+  <button id="submit-btn">Submit</button>
+  <p id="result"></p>
+</div>
+
+<script>
+  const questions = [
+    {
+      question: "What color is the sky?",
+      options: ["Blue", "Red", "Green", "Yellow"],
+      correctAnswer: "Blue"
+    },
+    {
+      question: "What animal says 'meow'?",
+      options: ["Dog", "Cat", "Bird", "Elephant"],
+      correctAnswer: "Cat"
+    }
+  ];
+
+  let currentQuestion = 0;
+  const questionElement = document.getElementById('question');
+  const optionsContainer = document.getElementById('options-container');
+  const submitButton = document.getElementById('submit-btn');
+  const resultElement = document.getElementById('result');
+
+  function loadQuestion() {
+    const q = questions[currentQuestion];
+    questionElement.textContent = q.question;
+    optionsContainer.innerHTML = '';
+    q.options.forEach(option => {
+      const button = document.createElement('button');
+      button.textContent = option;
+      button.classList.add('option');
+      button.addEventListener('click', () => selectAnswer(option));
+      optionsContainer.appendChild(button);
+    });
+  }
+
+  function selectAnswer(selectedOption) {
+    const q = questions[currentQuestion];
+    if (selectedOption === q.correctAnswer) {
+      resultElement.textContent = "Correct!";
+    } else {
+      resultElement.textContent = "Incorrect!";
+    }
+    currentQuestion++;
+    if (currentQuestion < questions.length) {
+      loadQuestion();
+    } else {
+      questionElement.textContent = '';
+      optionsContainer.innerHTML = '';
+      submitButton.style.display = 'none';
+    }
+  }
+
+  loadQuestion();
+</script>
+</body>
+</html>

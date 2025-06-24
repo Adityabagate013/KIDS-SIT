@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Sorting Game</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(to right, #5f27cd, #341f97);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin: 0;
+        }
+        .shapes-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .shape {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .circle {
+            background: radial-gradient(circle at top left, #fd79a8, #c0392b);
+        }
+        .square {
+            background: radial-gradient(circle at top left, #55efc4, #00b894);
+        }
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid #6C63FF;
+        }
+        .selected {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(108, 99, 255, 0.3);
+        }
+        footer {
+            background: linear-gradient(to right, #5f27cd, #341f97);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+        }
+        footer p {
+            margin: 0;
+        }
+        .shape:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Shape Sorting Game</h1>
+    </header>
+    <main>
+        <div class="shapes-container">
+            <div class="shape circle"></div>
+            <div class="shape square"></div>
+            <div class="shape triangle"></div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 SmartKidsHub. All rights reserved.</p>
+    </footer>
+    <script>
+        // JavaScript for Shape Sorting Game
+        document.addEventListener('DOMContentLoaded', function () {
+            const shapes = document.querySelectorAll('.shape');
+
+            shapes.forEach(shape => {
+                shape.addEventListener('click', () => {
+                    shape.classList.toggle('selected');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
